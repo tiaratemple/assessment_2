@@ -35,8 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((preValue, curValue) => {
+    return preValue + curValue.price
+}, 0)
 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +57,12 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    const  taxAmt = cartTotal * tax
+    let total = cartTotal + taxAmt - couponValue
+    return total 
+}
+console.log(calcFinalPrice(summedPrice, 4, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +86,12 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    Customer properties would need a name, phone number, address, method of payment.
+    The restaurant needs to know who is ordering, a way to contact them, an address for delivery, and money.
+    Name = string because it is text of letters
+    Phone number = number because it is a number
+    Address = string because it is alpha and numeric characters
+    Method of Payment = object because it has multiple values like name, card number, etc.
 
 */
 
@@ -88,3 +101,15 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: "Tiara",
+    phoneNumber: 555200777,
+    address: "123 Sesame Street, Dallas, TX 55555",
+    methodOfPayment: {
+        NameOnCard: "Tiara Temple",
+        cardNumber: 123456789101,
+        cvv: 000,
+        expdate: "01/24"
+    }
+    
+} 

@@ -70,7 +70,9 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
+let {price} = pizza 
 
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -80,8 +82,8 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-let {category, entree} = pizza
-console.log(pizza.category)
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -116,8 +118,32 @@ const foodArr = [
 
     },
     {
-        name:
+        name: "Cheesy Bread",
+        price: 8,
+        category: "Appetizer",
+        popularity: 100,
+        rating: 10,
+        tags: ["Vegetarian", "Kid-Friendly"],
+
+    },
+    {
+        name: "Cauliflower Margherita",
+        price: 22,
+        category: "Entree",
+        popularity: 85,
+        rating: 7,
+        tags: ["Vegetarian", "Gluten-free"],
+
+    },
+    {
+        name: "Leaning Tower of Cheese-a Pizza",
+        price: 18,
+        category: "Entree",
+        popularity: 90,
+        rating: 9,
+        tags: ["Vegetarian", "Kid-Friendly"],
     }
+
 
 ]
 
@@ -135,11 +161,13 @@ const foodArr = [
 */
 
 //CODE HERE
-
-
- const filteredFood = foodArr.filter()
-
-
+const food = (filteredFood) => {
+    return filteredFood
+}
+const filteredFood = foodArr.filter((food) => {
+    return food.tags.includes('Gluten-free')
+})
+console.log(food(filteredFood))
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -181,7 +209,15 @@ const foodArr = [
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArray = [];
+    if (type === "above") {
+        filteredArray = foodArr.filter( (obj) => obj[property] > number)
+    } else {
 
+    }
+    return filteredArray;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -191,3 +227,5 @@ const foodArr = [
 */
 
 //CODE HERE
+filterByProperty("rating", 9, "above")
+console.log(filterByProperty("rating", 9, "above"))

@@ -22,11 +22,11 @@
 */
 
 //CODE HERE
-// const greetUser = (username) => {
-//     return `Welcome back ${username}` 
-// }
-// greetUser("Andrew")
-// console.log(greetUser("Andrew"))
+const greetUser = (username) => {
+    return `Welcome back ${username}` 
+}
+greetUser("Andrew")
+console.log(greetUser("Andrew"))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,17 +53,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-// function canWeDeliver(zipCode) {
-//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-//         if (zipCode === deliveryAreaZipCodes[i]) {
-//             return `You're in our delivery zone!`
-//         } else {
-//             return `Sorry, we can't deliver to that address`
-//         }
-//     }
+function canWeDeliver(zipCode) {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (zipCode === deliveryAreaZipCodes[i]) {
+            return `You're in our delivery zone!`
+        } else {
+            return `Sorry, we can't deliver to that address`
+        }
+    }
     
-// }
-// console.log(canWeDeliver(85205))
+}
+console.log(canWeDeliver(85205))
         
 /* 
     Problem 2 Continued
@@ -83,16 +83,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-// function canWeDeliverTwo(zipCode) {
-//     const result = deliveryAreaZipCodes.includes(zipCode)
-//     if (result) {
-//         return`You're in our delivery zone!`
-//     } else {
-//         return  `Sorry, we can't deliver to that address`
+function canWeDeliverTwo(zipCode) {
+    const result = deliveryAreaZipCodes.includes(zipCode)
+    if (result) {
+        return`You're in our delivery zone!`
+    } else {
+        return  `Sorry, we can't deliver to that address`
 
-//     } 
-// }
-// console.log(canWeDeliverTwo(77777))
+    } 
+}
+console.log(canWeDeliverTwo(77777))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -127,8 +127,8 @@ const deals = [
 */
 
 //CODE HERE
-// deals[0].title = deals[0].title.replace('15% Off!','10% off')
-// console.log('deals', deals)
+ deals[0].title = deals[0].title.replace('15% Off!','10% off')
+ console.log('deals', deals)
 
 /*
     The restaurant is going to continue its
